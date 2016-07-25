@@ -1,0 +1,40 @@
+.c-request {
+	margin: 20px 0 0;
+
+	&__row {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+	}
+	
+	&__col {
+		display: table-cell;
+		padding-left: 5px;
+		text-align: left;
+		padding-right: 5px;
+
+		.c-form__control:last-child {
+			margin-bottom: 0;
+		}
+
+
+		&--size-3 {
+			width: 174px;
+			vertical-align: bottom;
+		}
+	}
+
+	&__inner {
+		margin-left: -5px;
+		margin-right: -5px;
+
+		.c-form__control:last-child {
+			margin-bottom: 10px;
+		}
+	}
+
+	.c-form__control {
+		margin-bottom: 10px;
+	}
+
+}

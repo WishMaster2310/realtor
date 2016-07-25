@@ -1,0 +1,50 @@
+.c-tabs {
+	&__content {
+		text-align: center;
+		overflow: hidden;
+	
+	}
+
+	&__nav {
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 335px;
+		margin: 0 auto;
+		color: #9da2ab;
+		margin-bottom: 60px;
+	}
+
+	&__link {
+		font-size: round(24/16em, 3);
+		font-weight: bold;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&--active {
+			color: @base-color;
+		}
+		
+	}
+
+
+	&__img {
+		max-width: 100%;
+		text-align: center;
+
+		
+	}
+
+	&__unit {
+		display: none;
+		
+	}
+	&__formwrapper {
+		border: 2px solid #d7dce4;
+		padding: 30px;
+		margin-bottom: 30px;
+		margin-top: 40px;
+	}
+}

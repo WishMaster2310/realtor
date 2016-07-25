@@ -1,0 +1,22 @@
+.c-inline-form {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	font-size: round(14/16em, 3);
+	
+
+	&__col {
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: 15px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		&:first-child {
+			width: 196px;
+
+		}
+	}
+}

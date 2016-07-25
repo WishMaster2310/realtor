@@ -1,0 +1,86 @@
+.c-feeds {
+	padding-left: 42px;
+	padding-right: 42px;
+	position: relative;
+	margin-bottom: 20px;
+
+	&__item {
+		padding: 25px;
+		color: @base-color;
+		background-color: #fff;
+		background-color: fade(#fff, 90%);
+		margin: 0 7px;
+		
+	}
+
+	&__text {
+		min-height: 167px;
+		text-align: left;
+		font-size: round(14/16em, 3);
+		line-height: round(20/14, 3);
+
+		&:before {
+			display: block;
+			content: "";
+			background: url("../images/feed-quote.png") no-repeat center top;
+			width: image-width("../images/feed-quote.png");
+			height: image-height("../images/feed-quote.png");
+			margin: 0  auto;
+			margin-bottom: 30px;
+			margin-top: 10px;
+		}
+	}
+
+	&__name {
+		font-style: italic;
+		font-size: round(14/16em, 3);
+		font-weight: 300;
+		text-align: left;
+		
+	}
+
+	&__arrow {
+		width: 14px;
+		height: 47px;
+		background: url(../images/slider-arrowset3.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 50%;
+		margin-top: -24px;
+		z-index: 1;
+		cursor: pointer;
+
+		&.slick-disabled {
+			cursor: default;
+		}
+
+		&--prev {
+			left: 50%;
+			margin-left: -((984/2) - (14/2))*1px;
+			background-position: 0 0;
+
+			&.slick-disabled {
+				background-position: 0 0 !important;
+				opacity: .6;
+			}
+		}
+
+		&--next {
+			right: 50%;
+			margin-right: -((984/2) - (14/2))*1px;
+			background-position: 0 -95px;
+
+			&.slick-disabled {
+				background-position: 0 -95px !important;
+				opacity: .6;
+			}
+		}
+
+		&--next:hover {
+			background-position: 0 -143px;
+		}
+		&--prev:hover {
+			background-position: 0 -47px;
+		}
+	}
+}

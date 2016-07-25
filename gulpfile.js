@@ -121,7 +121,11 @@ gulp.task('exportDPE', function() {
 });
 
 gulp.task('exportHTML', function() {
-  var images, scripts, styles;
+  var src, href, url;
+
+  src = /src=([\'\"])(?!\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\'\"]*)\1/g;
+  href = /href=([\'\"])(?!\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\'\"]*)\1/g;
+  url = /url\(([\'\"]?)(?!\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\)]*)\1/g;
   
   nunjucksRender.nunjucks.configure(['views/'], {
     watch: false
@@ -133,6 +137,9 @@ gulp.task('exportHTML', function() {
       isExport: true,
       ctx: siteDB
     }))
+    .pipe(replace(src, 'src=$1$3$1'))
+    .pipe(replace(href, 'href=$1$3$1'))
+    .pipe(replace(url, 'url($1$3$1'))
     .pipe(prettify({
       indent_char: ' ',
       indent_size: 2

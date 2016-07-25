@@ -1,0 +1,42 @@
+.c-nav {
+	background-color: #5e6571;
+
+
+	&__item {
+		text-decoration: none;
+		color: #fff;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 11px;
+		padding: 9px 5%;
+		text-transform: uppercase;
+		text-align: center;
+		border-right: 1px dotted #fff;
+		transition: background .3s ease-in;
+
+		&:last-child {
+			border-right: 0;
+			text-align: right;
+		}
+
+		&:hover {
+			background-color: #60a8ea;
+			
+		}
+
+		&:active {
+			background-color: darken(#60a8ea, 10%)
+		}                                                                           
+	}                           
+
+	&__inner {
+		display: table;
+		width: 100%;
+	}
+
+	&__container {
+		margin-left: -5%;
+		margin-right: -5%;
+	}
+}

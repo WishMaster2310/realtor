@@ -1,0 +1,65 @@
+<section class="l-section l-section--bordered-top">
+  <h2 class="c-h1 h-text-center">Как я работаю</h2>
+  <div class="c-tabs">
+    <div class="c-tabs__nav">
+      <label class="c-tabs__link c-tabs__link--active" data-type="sell">Продажа</label>
+      <div class="c-switcher">
+        <input type="checkbox" id="switcher0001" hidden>
+        <div class="c-switcher__panel"></div>
+        <div class="c-switcher__pin"></div>
+      </div>
+      <label class="c-tabs__link" data-type="buy">Покупка</label>
+    </div>
+    <!-- .tab nav -->
+    <div class="c-tabs__content">
+      <div class="c-tabs__unit" data-type="buy">
+        <img src="../images/shema-pice.png" alt="">
+        <div class="l-container">
+          <div class="c-tabs__formwrapper">
+            <form class="c-inline-form c-form" action="/" method="POST">
+              <div class="c-inline-form__col">
+                <p class="c-text">Либо заполните форму, и&nbsp;я&nbsp;сам перезвоню вам:</p>
+              </div>
+              <div class="c-inline-form__col">
+                <input class="c-form__control" type="text" placeholder="Ваше имя" required name="userName">
+              </div>
+              <div class="c-inline-form__col">
+                <input class="c-form__control c-form__control--tel" type="tel" placeholder="Ваш телефон" required name="userTel">
+              </div>
+              <div class="c-inline-form__col">
+                <button type="submit" class="c-btn c-btn--block">Обратный звонок</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <img class="c-tabs__img" src="../images/buy-schema.png" alt="">
+      </div>
+      <!-- .tab unit -->
+      <div class="c-tabs__unit" data-type="sell" style="display: block">
+        <div class="c-steps">
+          <div class="c-steps__item">
+            <div class="c-steps__img">
+              <img src="../images/steps1.png" alt="">
+            </div>
+            <div class="c-steps__text">Позвоните мне</div>
+          </div>
+          <div class="c-steps__item">
+            <div class="c-steps__img">
+              <img src="../images/steps2.png" alt="">
+            </div>
+            <div class="c-steps__text"><a class="h-pseudo-link js-scrollto" href="#onlineRequestForm">Отправьте онлайн заявку</a> на&nbsp;экспресс-оценку квартиры</div>
+          </div>
+          <div class="c-steps__item">
+            <div class="c-steps__img">
+              <img src="../images/steps3.png" alt="">
+            </div>
+            <div class="c-steps__text">Или заполните форму для&nbsp;обратного звонка</div>
+          </div>
+        </div>
+        <img class="c-tabs__img" src="../images/sell-schema.png" alt=""> {% include "blocks/onlineRequest.html" %}
+      </div>
+      <!-- .tab unit -->
+    </div>
+    <!-- .tab content -->
+  </div>
+</section>

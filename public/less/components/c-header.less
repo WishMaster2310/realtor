@@ -1,0 +1,54 @@
+.c-header {
+	overflow: hidden;
+
+	&__row {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		display: table;
+		table-layout: fixed;
+		
+		width: 100%;
+		color: #5e6571;
+	}
+
+	&__col {
+		display: table-cell;
+		vertical-align: middle;
+		
+
+		&--status {
+			padding-left: 20px;
+		}
+
+		&:last-child {
+			width: 229px;
+			text-align: right;
+			flex-shrink: 0;
+		}
+	}
+
+	&__text {
+		font-size: round(13/16em, 3);
+		line-height: round(16/13, 3);
+		font-weight: 300;
+		&--larger {
+			font-size: 1em;
+		}
+
+		b {
+			font-weight: bold;
+			
+		}
+	}
+
+	&__tel {
+		font-weight: bold;
+		text-decoration: none;
+		color: @base-color;
+		font-size: round(24/16em, 3);
+
+		&:hover {
+			color: #60a8ea
+		}
+	}
+}

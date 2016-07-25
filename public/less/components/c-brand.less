@@ -1,0 +1,32 @@
+.c-brand {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	width: 220px;
+	text-decoration: none;
+		color: @base-color;
+	
+	&__img {
+		display: table-cell;
+		vertical-align: middle;
+		width: 64px;
+		height: 64px;
+		border-right: 50%;
+		overflow: hidden;
+		
+	}
+
+	&__name {
+		display: table-cell;
+		padding-left: 10px;
+		font-size: round(24/16em, 3);
+		line-height: 1;
+		font-weight: 700;
+		vertical-align: middle;
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: #60a8ea
+	}
+}

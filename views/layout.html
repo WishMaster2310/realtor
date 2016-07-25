@@ -18,6 +18,7 @@
   <meta name="HandheldFriendly" content="true">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i&subset=cyrillic-ext" rel="stylesheet">
   <script>
   (function(H) {
     H.className = H.className.replace(/\bno-js\b/, 'js')
@@ -29,10 +30,12 @@
 		{%- else %}
     <!-- include liveReload only in Dev server -->
     <script src="//localhost:35729/livereload.js"></script>
+    <script src="/javascripts/dist/slick.min.js"></script>
     <script src="/javascripts/app.js"></script>
 	{%- endif %}
 </head>
 <body>
-  {% block content %}{% endblock content %}
+{% include "blocks/header.html" %}
+{% block content %}{% endblock content %}
   
 </body>

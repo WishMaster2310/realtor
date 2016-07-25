@@ -1,0 +1,63 @@
+{%- set flats = [
+	{
+		"title": "Трешка на речном",
+		"img": "flat1.jpg",
+		"url": "#"
+	},
+	{
+		"title": "Двушка в Котельниках",
+		"img": "flat2.jpg",
+		"url": "#"
+	},
+	{
+		"title": "VIP-аппартаменты в центре",
+		"img": "flat3.jpg",
+		"url": "#"
+	},
+	{
+		"title": "Трешка на речном",
+		"img": "flat1.jpg",
+		"url": "#"
+	},
+	{
+		"title": "Двушка в Котельниках",
+		"img": "flat2.jpg",
+		"url": "#"
+	},
+	{
+		"title": "VIP-аппартаменты в центре",
+		"img": "flat3.jpg",
+		"url": "#"
+	},
+	{
+		"title": "Трешка на речном",
+		"img": "flat1.jpg",
+		"url": "#"
+	},
+	{
+		"title": "Двушка в Котельниках",
+		"img": "flat2.jpg",
+		"url": "#"
+	},
+	{
+		"title": "VIP-аппартаменты в центре",
+		"img": "flat3.jpg",
+		"url": "#"
+	}
+] -%}
+<section class="l-section">
+	<div class="l-container">
+		<h2 class="c-h1 h-text-center">Готовые к продаже квартиры прямо сейчас</h2>
+		<div class="c-media">
+			<div class="c-media__list">
+				{%- for flat in flats %}
+					<div class="c-media__item">
+						<div class="c-media__img" style="background-image: url(../uploads/{{ flat.img }})"></div>
+						<div class="c-media__title">{{ flat.title }}</div>
+						<a href="{{ flat.url }}" class="c-btn c-btn--block">Подать заявку</a>
+					</div><!-- .media item -->
+				{%- endfor %}
+			</div><!-- .media list -->
+		</div>
+	</div>
+</section>

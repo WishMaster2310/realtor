@@ -1,0 +1,39 @@
+{%- set cond = [
+{
+	title: "Старт рекламной кампании в&nbsp;день обращения",
+	image: "conditions_flag.png"
+},
+{
+	title: "Никаких <br>предоплат",
+	image: "conditions_cash.png"
+},
+{
+	title: "Полная прозрачность и&nbsp;конфиденциальность взаимоотношений",
+	image: "conditions_search.png"
+},
+{
+	title: "Минимальное участие клиента в&nbsp;рутине",
+	image: "conditions_smile.png"
+},
+{
+	title: "Юридическая <br>и финансовая безопасность",
+	image: "conditions_shield.png"
+}
+] -%}
+
+<section class="l-section">
+	<div class="l-container h-text-center">
+		<p class="c-text h-uppercase">Получите неоспоримые выгоды прямо сейчас, позвонив по телефону</p>
+		<a class="c-h1" href="tel:+79629382676">+ 7 (962) 938-26-76</a>
+		<div class="c-conditions">
+			{%- for item in cond %}
+				<figure class="c-conditions__item">
+					<p class="c-conditions__imgbox">
+						<img src="../images/{{ item.image }}" alt="" class="c-conditions__img">
+					</p>
+					<figcaption class="c-conditions__text">{{ item.title|safe }}</figcaption>
+				</figure><!-- .conditions item -->
+			{%- endfor %}
+		</div><!-- .conditions -->
+	</div>
+</section>

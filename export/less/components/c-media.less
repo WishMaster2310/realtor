@@ -89,5 +89,46 @@
 			background-position: 0 -47px;
 		}
 	}
+
+	@media only screen and (max-width: 1005px) {
+		&__arrow {
+			&--prev {
+				margin-left: -((748/2) - (14/2))*1px;
+			}
+
+			&--next {
+				margin-right: -((748/2) - (14/2))*1px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.slick-dots {
+		text-align: center;
+		margin-top: 10px;
+		> li {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #5e6571;
+			margin-right: 4px;
+
+			&.slick-active {
+				background-color: #60a8ea
+			}
+
+
+			
+			button {
+				display: none;
+				
+			}
+		}
+	}
 }
 

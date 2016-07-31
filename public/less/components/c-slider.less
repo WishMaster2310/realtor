@@ -119,6 +119,11 @@
 			border-radius: 50%;
 			margin-right: 5px;
 
+			@media only screen and (max-width: 768px) {
+				width: 14px;
+				height: 14px;
+			}
+
 			&.slick-active {
 				background-color: #a2a5a6;
 				border-color: #60a8ea
@@ -148,6 +153,12 @@
 
 		&__text {
 			font-size: 1em;
+		}
+
+		&__content {
+		    padding-top: 40px;
+		    padding-bottom: 66px;		    
+		    min-height: 380px;
 		}
 	}
 }

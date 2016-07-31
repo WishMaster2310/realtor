@@ -51,4 +51,37 @@
 			color: #60a8ea
 		}
 	}
+
+	@media only screen and (max-width: 1005px) {
+		&__col--status {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		&__row {
+			display: block;
+			
+		}
+
+		&__col {
+			display: block;
+
+			&:last-child {
+				text-align: left;
+			}
+			
+		}
+
+		&__col--status, 
+		&__col--contacts {
+			display: none;
+		}
+
+		&__col--slogon {
+			margin-top: 5px;
+		}
+
+
+	}
 }

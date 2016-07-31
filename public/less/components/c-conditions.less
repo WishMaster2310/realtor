@@ -13,6 +13,14 @@
 		font-size: round(12/16em, 3);
 		line-height: round(18/13, 3);
 		text-transform: uppercase;
+		transform: translateY(100px);
+		opacity: 0;
+		transition: all .6s ease-in-out;
+
+		&--active {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}	
 
 	&__imgbox {

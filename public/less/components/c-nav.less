@@ -1,5 +1,6 @@
 .c-nav {
 	background-color: #5e6571;
+	transition: transform .3s ease-in-out;
 
 
 	&__item {
@@ -40,6 +41,11 @@
 		margin-right: -5%;
 	}
 
+	&-toggle {
+		display: none;
+		
+	}
+
 	@media only screen and (max-width: 1005px) {
 
 		&__container {
@@ -58,14 +64,130 @@
 	}
 
 	@media only screen and (max-width: 768px) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		transform: translateY(-120%);
+		z-index: 2;
+
 		&__item {
 			display: block;
 			border-right: 0;
+			padding: 10px 20px 10px 0;
+			text-align: left !important;
 		}
 
 		&__inner {
 			display: block;
 			
+		}
+
+		&-toggle {
+			display: block;
+			background-color: #5e6571;
+			height: 40px;
+			margin: auto;
+
+		}
+
+		
+		&__burger {
+			width: 32px;
+			height: 40px;
+			z-index: 3;
+			display: inline-block;
+			vertical-align: top;
+			position: absolute;
+			top: 0;
+			right: 10px;
+
+			span {
+				position: absolute;
+				display: block;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background-color: #fff;
+				top: 50%;
+				margin-top: -2px;
+				transition: all .3s ease-in;
+
+				&:before,
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					height: 3px;
+					background-color: #fff;
+					left: 0;
+					right: 0;
+					transition: all .3s ease-in;
+
+				}
+
+				&:before {
+					top: -8px;
+					transform-origin: 0 0;
+				}
+
+				&:after {
+					bottom: -8px;
+					transform-origin: 0 0;
+				}
+			}
+			
+			
+		}
+
+		&__mob {
+
+		}
+
+		&__mob-header {
+			display: inline-block;
+			vertical-align: top;
+			color: #fff;
+			font-size: 18px;
+			margin-top: 8px;
+			font-weight: 300;
+			
+
+			> div {
+				font-size: 13px;
+				font-style: italic;
+				color: fade(#fff, 90%);
+				margin-bottom: 2px;
+			}
+
+			> a {
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px dashed #fff;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.--nav-open {
+		.c-nav {
+			transform: translateY(0)
+		}
+
+		.c-nav__burger {
+			span {
+				background-color: #5e6571;
+				//transform: scale(0.2);
+
+				&:before {
+					transform: rotateZ(45deg) translateY(-6px) translateX(3px)
+				}
+
+				&:after {
+					transform: rotateZ(-45deg) translateY(6px)
+				}
+			}
 		}
 	}
 }

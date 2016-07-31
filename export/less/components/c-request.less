@@ -1,40 +1,92 @@
 .c-request {
-	margin: 20px 0 0;
+  margin: 20px 0 0;
+  &__row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  &__col {
+    display: table-cell;
+    padding-left: 5px;
+    text-align: left;
+    padding-right: 5px;
+    .c-form__control:last-child {
+      margin-bottom: 0;
+    }
+    &--size-3 {
+      width: 174px;
+      vertical-align: bottom;
+    }
+  }
+  &__inner {
+    margin-left: -5px;
+    margin-right: -5px;
+    .c-form__control:last-child {
+      margin-bottom: 10px;
+    }
+  }
+  .c-form__control {
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 1005px) {
+    &__inner {
+      margin-left: -10px;
+      margin-right: -10px;
+      .c-form__control:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    &__row {
+      display: block;
+      width: 100%;
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+        clear: both;
+      }
+      //margin-left: -2%;
+    }
+    &__col {
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 50%;
+      float: left;
+      margin-bottom: 10px;
+      &--size-1 {
+        //width: 48%;
+      }
+      &--size-2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .c-form__control {
+          width: 50%;
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      &--size-3 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    &__col {
+      width: 100%;
 
-	&__row {
-		display: table;
-		width: 100%;
-		table-layout: fixed;
-	}
-	
-	&__col {
-		display: table-cell;
-		padding-left: 5px;
-		text-align: left;
-		padding-right: 5px;
-
-		.c-form__control:last-child {
-			margin-bottom: 0;
-		}
-
-
-		&--size-3 {
-			width: 174px;
-			vertical-align: bottom;
-		}
-	}
-
-	&__inner {
-		margin-left: -5px;
-		margin-right: -5px;
-
-		.c-form__control:last-child {
-			margin-bottom: 10px;
-		}
-	}
-
-	.c-form__control {
-		margin-bottom: 10px;
-	}
-
+      &--size-2 {
+        flex-direction: column;
+        justify-content: space-between;
+        .c-form__control {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

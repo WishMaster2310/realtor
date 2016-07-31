@@ -5,6 +5,8 @@ $(function() {
 		infinite: false,
 		prevArrow: "<div class='c-slider__arrow c-slider__arrow--prev'></div>",
 		nextArrow: "<div class='c-slider__arrow c-slider__arrow--next'></div>",
+		autoplay: true,
+		autoplaySpeed: 4000,
 		responsive: [
 			   {
 			     breakpoint: 1005,
@@ -32,6 +34,8 @@ $(function() {
 			slidesToShow: 3,
 			slidesToScroll: 3,
 			adaptiveHeight: true,
+			autoplay: true,
+			autoplaySpeed: 4000,
 			responsive: [
 			   {
 			     breakpoint: 1005,
@@ -45,7 +49,8 @@ $(function() {
 			     settings: {
 			       slidesToShow: 1,
 			       slidesToScroll: 1,
-			       arrows: false
+			       arrows: false,
+			       dots: true
 			     }
 			   }
 			]
@@ -61,6 +66,8 @@ $(function() {
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		adaptiveHeight: true,
+		autoplay: true,
+		autoplaySpeed: 4000,	
 		responsive: [
 			   {
 			     breakpoint: 1005,
@@ -74,7 +81,8 @@ $(function() {
 			     settings: {
 			       slidesToShow: 1,
 			       slidesToScroll: 1,
-			       arrows: false
+			       arrows: false,
+			       dots: true
 			     }
 			   }
 			]
@@ -108,6 +116,36 @@ $(function() {
 			e.preventDefault();
 			var target = $($(this).attr('href'));
 			$('html, body').animate({scrollTop: target.offset().top }, 400)
-	})
+	});
+
+	$('.c-nav__burger').on('click', function() {
+		$('body').toggleClass('--nav-open')	
+	});
+
+	$('input[type="tel"]').mask('+7 (999) 999-99-99');
+
+	var condScrollFlag = true;
+
+	$(window).on('scroll', function() {
+		if (!condScrollFlag) return;
+		var wh = $(this).height();
+		var target = $('.c-conditions');
+		var targetOT = target.offset().top;
+		console.log($(this).scrollTop(), wh, targetOT);
+
+		if ($(this).scrollTop() > targetOT - wh) {
+
+			$('.c-conditions__item').each(function(idx, el) {
+				
+				setTimeout(function() {
+					$(el).addClass('c-conditions__item--active')
+				}, (idx+1)*400)
+			})
+
+			target.addClass('c-conditions--animated');
+			condScrollFlag = false;
+		}
+
+	});
 
 });

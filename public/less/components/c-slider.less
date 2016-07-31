@@ -129,4 +129,25 @@
 			}
 		}
 	}
+
+	@media only screen and (max-width: 1005px) {
+		.l-container {
+			width: 768px;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.l-container {
+			width: 320px;
+		}
+
+		&__title {
+			font-weight: bold;
+			font-size: round(36/16em, 3);
+		}
+
+		&__text {
+			font-size: 1em;
+		}
+	}
 }

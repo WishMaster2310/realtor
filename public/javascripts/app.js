@@ -4,29 +4,53 @@ $(function() {
 		dots: true,
 		infinite: false,
 		prevArrow: "<div class='c-slider__arrow c-slider__arrow--prev'></div>",
-		nextArrow: "<div class='c-slider__arrow c-slider__arrow--next'></div>"
+		nextArrow: "<div class='c-slider__arrow c-slider__arrow--next'></div>",
+		responsive: [
+			   {
+			     breakpoint: 1005,
+			     settings: {
+			     	 arrows: false
+			     }
+			   },
+			   {
+			     breakpoint: 768,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       arrows: false
+			     }
+			   }
+			]
 	});
 
 	$('.c-media__list').each(function() {
 		$(this).slick({
-		dots: false,
-		infinite: false,
-		prevArrow: "<div class='c-media__arrow c-media__arrow--prev'></div>",
-		nextArrow: "<div class='c-media__arrow c-media__arrow--next'></div>",
-		slidesToShow: 3,
-		slidesToScroll: 3,
-		adaptiveHeight: true,
-		responsive: [
-		   {
-		     breakpoint: 600,
-		     settings: {
-		       slidesToShow: 1,
-		       slidesToScroll: 1
-		     }
-		   }
-		]
+			dots: false,
+			infinite: false,
+			prevArrow: "<div class='c-media__arrow c-media__arrow--prev'></div>",
+			nextArrow: "<div class='c-media__arrow c-media__arrow--next'></div>",
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			adaptiveHeight: true,
+			responsive: [
+			   {
+			     breakpoint: 1005,
+			     settings: {
+			       slidesToShow: 2,
+			       slidesToScroll: 2
+			     }
+			   },
+			   {
+			     breakpoint: 768,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       arrows: false
+			     }
+			   }
+			]
+		});
 	});
-	})
 
 
 	$('.c-feeds__list').slick({
@@ -38,14 +62,22 @@ $(function() {
 		slidesToScroll: 3,
 		adaptiveHeight: true,
 		responsive: [
-		   {
-		     breakpoint: 600,
-		     settings: {
-		       slidesToShow: 1,
-		       slidesToScroll: 1
-		     }
-		   }
-		]
+			   {
+			     breakpoint: 1005,
+			     settings: {
+			       slidesToShow: 2,
+			       slidesToScroll: 2
+			     }
+			   },
+			   {
+			     breakpoint: 768,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       arrows: false
+			     }
+			   }
+			]
 	});
 
 	function pinSwitcher () {
